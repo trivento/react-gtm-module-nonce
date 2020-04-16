@@ -1,7 +1,7 @@
 {
-  "name": "react-gtm-module",
-  "version": "2.0.8",
-  "description": "React Google Tag Manager Module",
+  "name": "react-gtm-module-nonce",
+  "version": "1.0.0",
+  "description": "React Google Tag Manager Module with nonce customization",
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint .",
@@ -12,17 +12,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alinemorelli/react-gtm"
-  },
-  "author": {
-    "name": "Aline Morelli",
-    "email": "aline.morelliw@gmail.com",
-    "url": "https://github.com/alinemorelli"
+    "url": "https://github.com/irsooti/react-gtm-module-nonce"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alinemorelli/react-gtm/issues"
+    "url": "https://github.com/irsooti/react-gtm-module-nonce/issues"
   },
+  "contributors": [
+    "Aline Morelli <aline.morelliw@gmail.com>",
+    "Mattia Garzya <mattia.garzya@aesys.tech>",
+    "Daniele Irsuti <daniele.irsuti@aesys.tech>"
+  ],
   "homepage": "",
   "keywords": [
     "react",
