@@ -1,5 +1,5 @@
-[![npm version](https://img.shields.io/npm/v/react-gtm-module.svg?style=flat-square)](https://www.npmjs.com/package/react-gtm-module-nonce)
-[![npm downloads](https://img.shields.io/npm/dm/react-gtm-module.svg?style=flat-square)](https://www.npmjs.com/package/react-gtm-module-nonce)
+[![npm version](https://img.shields.io/npm/v/react-gtm-module-nonce.svg?style=flat-square)](https://www.npmjs.com/package/react-gtm-module-nonce)
+[![npm downloads](https://img.shields.io/npm/dm/react-gtm-module-nonce.svg?style=flat-square)](https://www.npmjs.com/package/react-gtm-module-nonce)
 
 # react-gtm-module-nonce
 ### React Google Tag Manager Module
