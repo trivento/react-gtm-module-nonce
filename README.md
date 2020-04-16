@@ -2,7 +2,7 @@
 [![npm version](https://img.shields.io/npm/v/react-gtm-module.svg?style=flat-square)](https://www.npmjs.com/package/react-gtm-module)
 [![npm downloads](https://img.shields.io/npm/dm/react-gtm-module.svg?style=flat-square)](https://www.npmjs.com/package/react-gtm-module)
 
-# react-gtm-module-dyn-nonce
+# react-gtm-module-nonce
 ### React Google Tag Manager Module
 
 This is a Javascript module to [React](https://facebook.github.io/react/) based apps that implement Google Tag Manager. It is designed to use [GTM](https://developers.google.com/tag-manager/quickstart) snippet.
@@ -60,7 +60,8 @@ const tagManagerArgs = {
     dataLayer: {
         userId: '001',
         userProject: 'project'
-    }
+    },
+    nonce: "noncegenerated-at-runtime"
 }
 
 TagManager.initialize(tagManagerArgs)
