@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var _Snippets = require('./Snippets');
+var _Snippets = require("./Snippets");
 
 var _Snippets2 = _interopRequireDefault(_Snippets);
 
@@ -8,7 +8,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var TagManager = {
   dataScript: function dataScript(dataLayer) {
-    var script = document.createElement('script');
+    var script = document.createElement("script");
     script.innerHTML = dataLayer;
     return script;
   },
@@ -16,14 +16,17 @@ var TagManager = {
     var snippets = _Snippets2.default.tags(args);
 
     var noScript = function noScript() {
-      var noscript = document.createElement('noscript');
+      var noscript = document.createElement("noscript");
       noscript.innerHTML = snippets.iframe;
       return noscript;
     };
 
-    var script = function script() {
-      var script = document.createElement('script');
+    var script = function script(nonce) {
+      var script = document.createElement("script");
       script.innerHTML = snippets.script;
+      if (nonce) {
+        script.setAttribute("nonce", "" + nonce);
+      }
       return script;
     };
 
@@ -41,11 +44,13 @@ var TagManager = {
         events = _ref$events === undefined ? {} : _ref$events,
         dataLayer = _ref.dataLayer,
         _ref$dataLayerName = _ref.dataLayerName,
-        dataLayerName = _ref$dataLayerName === undefined ? 'dataLayer' : _ref$dataLayerName,
+        dataLayerName = _ref$dataLayerName === undefined ? "dataLayer" : _ref$dataLayerName,
         _ref$auth = _ref.auth,
-        auth = _ref$auth === undefined ? '' : _ref$auth,
+        auth = _ref$auth === undefined ? "" : _ref$auth,
         _ref$preview = _ref.preview,
-        preview = _ref$preview === undefined ? '' : _ref$preview;
+        preview = _ref$preview === undefined ? "" : _ref$preview,
+        _ref$nonce = _ref.nonce,
+        nonce = _ref$nonce === undefined ? "" : _ref$nonce;
 
     var gtm = this.gtm({
       id: gtmId,
@@ -56,13 +61,13 @@ var TagManager = {
       preview: preview
     });
     if (dataLayer) document.head.appendChild(gtm.dataScript);
-    document.head.insertBefore(gtm.script(), document.head.childNodes[0]);
+    document.head.insertBefore(gtm.script(nonce), document.head.childNodes[0]);
     document.body.insertBefore(gtm.noScript(), document.body.childNodes[0]);
   },
   dataLayer: function dataLayer(_ref2) {
     var _dataLayer = _ref2.dataLayer,
         _ref2$dataLayerName = _ref2.dataLayerName,
-        dataLayerName = _ref2$dataLayerName === undefined ? 'dataLayer' : _ref2$dataLayerName;
+        dataLayerName = _ref2$dataLayerName === undefined ? "dataLayer" : _ref2$dataLayerName;
 
     if (window[dataLayerName]) return window[dataLayerName].push(_dataLayer);
     var snippets = _Snippets2.default.dataLayer(_dataLayer, dataLayerName);

@@ -13,7 +13,7 @@ You can easily use custom dataLayer, multiple dataLayers and additional events.
 [npm](https://www.npmjs.com/):
 
 ```bash
-npm install react-gtm-module --save
+npm install react-gtm-module-nonce --save
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ import Router from 'react-router'
 import routes from './routes'
 
 ...
-import TagManager from 'react-gtm-module'
+import TagManager from 'react-gtm-module-nonce'
 
 const tagManagerArgs = {
     gtmId: 'GTM-000000'
@@ -52,7 +52,7 @@ import Router from 'react-router'
 import routes from './routes'
 
 ...
-import TagManager from 'react-gtm-module'
+import TagManager from 'react-gtm-module-nonce'
 
 const tagManagerArgs = {
     gtmId: 'GTM-000000',
@@ -85,7 +85,7 @@ import Router from 'react-router'
 import routes from './routes'
 
 ...
-import TagManager from 'react-gtm-module'
+import TagManager from 'react-gtm-module-nonce'
 
 const tagManagerArgs = {
     gtmId: 'GTM-000000',
@@ -106,7 +106,7 @@ And send your data in each page you want
 import React from 'react'
 
 ...
-import TagManager from 'react-gtm-module'
+import TagManager from 'react-gtm-module-nonce'
 
 const tagManagerArgs = {
     dataLayer: {
@@ -146,7 +146,7 @@ import Router from 'react-router'
 import routes from './routes'
 
 ...
-import TagManager from 'react-gtm-module'
+import TagManager from 'react-gtm-module-nonce'
 
 const tagManagerArgs = {
     gtmId: 'GTM-000000',
@@ -175,7 +175,7 @@ import Router from 'react-router'
 import routes from './routes'
 
 ...
-import TagManager from 'react-gtm-module'
+import TagManager from 'react-gtm-module-nonce'
 
 const tagManagerArgs = {
     gtmId: 'GTM-000000',
@@ -205,6 +205,7 @@ Look for gtm_auth and gtm_preview
 |events| `Object`| No | Additional events such as 'gtm.start': new Date().getTime(),event:'gtm.js'.|
 |auth| `String` | No | used to set environments. |
 |preview| `String` | No | used to set environments, something like `env-00`. |
+|nonce| `String`| No | nonce value, it should be generated at runtime.|
 
 
 ### Note:
