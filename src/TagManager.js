@@ -53,12 +53,12 @@ const TagManager = {
     document.head.insertBefore(gtm.script(nonce), document.head.childNodes[0]);
     document.body.insertBefore(gtm.noScript(), document.body.childNodes[0]);
   },
-  dataLayer: function ({ dataLayer, dataLayerName = "dataLayer" }) {
-    if (window[dataLayerName]) return window[dataLayerName].push(dataLayer);
-    const snippets = Snippets.dataLayer(dataLayer, dataLayerName);
-    const dataScript = this.dataScript(snippets);
-    document.head.appendChild(dataScript);
-  },
-};
+  dataLayer: function ({dataLayer, dataLayerName = 'dataLayer'}) {
+    if (window[dataLayerName]) return window[dataLayerName].push(dataLayer)
+    const snippets = Snippets.dataLayer(dataLayer, dataLayerName)
+    const dataScript = this.dataScript(snippets)
+    document.head.insertBefore(dataScript, document.head.childNodes[0])
+  }
+}
 
 module.exports = TagManager;
